@@ -7,32 +7,74 @@ To improve efficiency, the original code has been refactored by switching the or
 
 1.	Created a tickerIndex variable as a Single data type and assigned a value of Zero.
 
-
-![tickerIndex](https://user-images.githubusercontent.com/76491891/110210096-23f1b200-7e5e-11eb-8550-8537e2602cca.png)
-
+~~~
+Dim tickerIndex As Single
+    tickerIndex = 0
+~~~
 
 2.	Three output arrays are created:
    *	The tickerVolume array as a Long data type
    *	The tickerStartingPrices array as a Single data type
    *	The tickerEndingPrices array as a Single data type
 
-![Arrays](https://user-images.githubusercontent.com/76491891/110210112-32d86480-7e5e-11eb-90ae-9ac284cb3fca.png)
-
+~~~
+    Dim tickerVolumes(12) As Long
+    Dim tickerStartingPrices(12) As Single
+    Dim tickerEndingPrices(12) As Single
+~~~
+    
 3.	Created a For loop to initialize the tickerVolumes to Zero.
 
-![TickerVolumes](https://user-images.githubusercontent.com/76491891/110210125-4388da80-7e5e-11eb-9b1f-bf2f33c03612.png)
+~~~
+ For i = 0 To 11
+        
+        tickerVolumes(i) = 0
+    
+    Next i
+    
+~~~
 
 4.	Created a For loop over all the rows in a spreadsheet by increasing the tickerVolumes using the tickerIndex. Using If-Then statements:
    *	If the current row is the first row of the selected tickerIndex, then assign the current closing price to the tickerStartingPrices.
    *	If the current row is the last row of the selected tickerIndex, then assign the current closing price to the tickerEndingPrices.
    *	Increase the tickerIndex if the next row ticker does not match the previous row ticker.
 
-![For loop](https://user-images.githubusercontent.com/76491891/110210136-4c79ac00-7e5e-11eb-92c0-88114216ae91.png)
+~~~
+For i = 2 To RowCount
+        
+         tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+         
+         If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+            
+            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+              
+         End If
+            
+         If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+          
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+                      
+            tickerIndex = tickerIndex + 1
+            
+          End If
+    
+    Next i
+~~~
 
 5.	Created a For loop using tickerIndex to display the outputs as Ticker, Total daily volume, Return.
  
- ![Output](https://user-images.githubusercontent.com/76491891/110210154-5a2f3180-7e5e-11eb-9a80-e03e0b46d586.png)
-
+ ~~~
+ For i = 0 To 11
+        
+        Worksheets("All Stocks Analysis").Activate
+        tickerIndex = i
+        Cells(i + 4, 1).Value = tickers(tickerIndex)
+        Cells(i + 4, 2).Value = tickerVolumes(tickerIndex)
+        Cells(i + 4, 3).Value = tickerEndingPrices(tickerIndex) / tickerStartingPrices(tickerIndex) - 1
+        
+    Next i
+ ~~~
+ 
 ### Stock Performance of 2017 and 2018
 *	Stock returns for 2017 are positive except for “TERP”.
 *	Stock returns for 2018 are mostly negative except for “ENPH”, “RUN”.
