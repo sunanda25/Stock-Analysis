@@ -18,17 +18,17 @@ tickerIndex = 0
    *	The tickerEndingPrices array as a Single data type
 
 ~~~
-    Dim tickerVolumes(12) As Long
-    Dim tickerStartingPrices(12) As Single
-    Dim tickerEndingPrices(12) As Single
+Dim tickerVolumes(12) As Long
+Dim tickerStartingPrices(12) As Single
+Dim tickerEndingPrices(12) As Single
 ~~~
     
 3.	Created a For loop to initialize the tickerVolumes to Zero.
 
 ~~~
- For i = 0 To 11
-    tickerVolumes(i) = 0
- Next i 
+For i = 0 To 11
+   tickerVolumes(i) = 0
+Next i 
 ~~~
 
 4.	Created a For loop over all the rows in a spreadsheet by increasing the tickerVolumes using the tickerIndex. Using If-Then statements:
@@ -71,15 +71,11 @@ Next i
 ### Execution Times
 The execution time of original code for the years 2017 and 2018:
 
-![Original_2017](https://user-images.githubusercontent.com/76491891/110210221-a5e1db00-7e5e-11eb-85c5-cfc32246730a.png)
-
-![Original_2018](https://user-images.githubusercontent.com/76491891/110210229-abd7bc00-7e5e-11eb-9efa-727cc6cba695.png)
+![Original_2017](https://user-images.githubusercontent.com/76491891/110210221-a5e1db00-7e5e-11eb-85c5-cfc32246730a.png)    ![Original_2018](https://user-images.githubusercontent.com/76491891/110210229-abd7bc00-7e5e-11eb-9efa-727cc6cba695.png)
 
 The execution time of refactored code for the years 2017 and 2018:
 
-![VBA_Challenge_2017](https://user-images.githubusercontent.com/76491891/110210239-b8f4ab00-7e5e-11eb-9de4-2d528ecdd120.png)
-
-![VBA_Challenge_2018](https://user-images.githubusercontent.com/76491891/110210246-beea8c00-7e5e-11eb-9715-1d2a892a8f1e.png)
+![VBA_Challenge_2017](https://user-images.githubusercontent.com/76491891/110210239-b8f4ab00-7e5e-11eb-9de4-2d528ecdd120.png)    ![VBA_Challenge_2018](https://user-images.githubusercontent.com/76491891/110210246-beea8c00-7e5e-11eb-9715-1d2a892a8f1e.png)
 
 ## Summary
 ### Advantages or Disadvantages of Refactoring code:
