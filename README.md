@@ -66,16 +66,18 @@ Next i
 *	Stock returns for 2018 are mostly negative except for “ENPH”, “RUN”.
 *	DQ ticker has a 199.4% return in 2017 whereas in 2018 it has -62.6%.
 
-<img width="335" alt="All_Stocks_2017_2018" src="https://user-images.githubusercontent.com/76491891/110210216-982c5580-7e5e-11eb-9968-be81e09a4df5.png">
+<img width="400" alt="All_Stocks_2017_2018" src="https://user-images.githubusercontent.com/76491891/110210216-982c5580-7e5e-11eb-9968-be81e09a4df5.png">
 
 ### Execution Times
 The execution time of original code for the years 2017 and 2018:
 
-![Original_2017](https://user-images.githubusercontent.com/76491891/110210221-a5e1db00-7e5e-11eb-85c5-cfc32246730a.png)    ![Original_2018](https://user-images.githubusercontent.com/76491891/110210229-abd7bc00-7e5e-11eb-9efa-727cc6cba695.png)
+![Original_2017](https://user-images.githubusercontent.com/76491891/110228503-a797b700-7ecf-11eb-90f6-1fc0a27022b3.png)
+![Original_2018](https://user-images.githubusercontent.com/76491891/110228505-abc3d480-7ecf-11eb-8003-9fa6ad6bbef7.png)
 
 The execution time of refactored code for the years 2017 and 2018:
 
-![VBA_Challenge_2017](https://user-images.githubusercontent.com/76491891/110210239-b8f4ab00-7e5e-11eb-9de4-2d528ecdd120.png)    ![VBA_Challenge_2018](https://user-images.githubusercontent.com/76491891/110210246-beea8c00-7e5e-11eb-9715-1d2a892a8f1e.png)
+![VBA_Challenge_2017](https://user-images.githubusercontent.com/76491891/110210239-b8f4ab00-7e5e-11eb-9de4-2d528ecdd120.png) 
+![VBA_Challenge_2018](https://user-images.githubusercontent.com/76491891/110210246-beea8c00-7e5e-11eb-9715-1d2a892a8f1e.png)
 
 ## Summary
 ### Advantages or Disadvantages of Refactoring code:
